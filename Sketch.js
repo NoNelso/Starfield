@@ -1,5 +1,5 @@
 var stars = [];
-var speed;
+var speedMod;
 
 function setup() {
   createCanvas(800, 600);
@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  speed = map(mouseX, 0, width, 0, 50);
+  speedMod = map(mouseX, 0, width, 0, 50);
   background(0);
   translate(width / 2, height / 2)
   for (var i = 0; i < stars.length; i++) {
