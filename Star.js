@@ -3,8 +3,9 @@ function Star() {
   this.y = random(-height, height);
   this.z = random(width);
   this.pz = this.z;
+  this.speed = random(1, 20);
   this.update = function() {
-    this.z = this.z - speed;
+    this.z = this.z - (this.speed * speedMod);
     if (this.z < 1) {
       this.z = width;
       this.x = random(-width, width);
