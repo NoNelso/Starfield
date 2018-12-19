@@ -12,9 +12,12 @@ class Star {
 
 function update() {
   z = z - 1;
-  x = random(-width, width);
-  y = random(-height, height)
-  if (z < 1) z = width
+
+  if (z < 1) {
+    z = width;
+    x = random(-width, width);
+    y = random(-height, height);
+  }
 }
 
 function show() {
@@ -22,6 +25,6 @@ function show() {
   noStroke();
   float sx = map(x / z, 0, 1, 0, width);
   float sy = map(y / x, 0, 1, 0, height);
-  float r = map(z, 0, width, )
+  float r = map(z, 0, width, 16, 0);
   ellipse(sx, sy, 8, 8);
 }
